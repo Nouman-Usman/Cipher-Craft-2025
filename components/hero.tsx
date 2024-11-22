@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Calendar, MapPin } from "'lucide-react'"
+import { Calendar, MapPin } from "lucide-react"
 
 export function Hero() {
   return (

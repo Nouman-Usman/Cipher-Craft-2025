@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code2, Lightbulb, Rocket } from "'lucide-react'"
+import { Code2, Lightbulb, Rocket } from "lucide-react"
 import {
   Card,
   CardContent,

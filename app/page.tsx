@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "'react'"
+import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -13,7 +13,6 @@ import { Footer } from "@/components/footer"
 
 export default function Page() {
   const [fileChanges, setFileChanges] = useState<string[]>([]);
-
   useEffect(() => {
     const fetchFileChanges = async () => {
       const response = await fetch("'/api/simulated-file-changes'");
@@ -33,18 +32,14 @@ export default function Page() {
       <About />
       <Sponsors />
       <Partners />
-      <FAQ />
+      <section className="bg-white dark:bg-neutral-950">
+        <FAQ />
+      </section>
       <Team />
-      <Contact />
+      <section className="bg-white dark:bg-neutral-950">
+        <Contact />
+      </section>
       <Footer />
-      <div className="fixed bottom-4 right-4 bg-neutral-900 text-neutral-50 p-4 rounded-lg shadow-lg dark:bg-neutral-50 dark:text-neutral-900">
-        <h3 className="font-bold mb-2">Recent File Changes:</h3>
-        <ul>
-          {fileChanges.map((change, index) => (
-            <li key={index}>{change}</li>
-          ))}
-        </ul>
-      </div>
     </div>
   )
 }

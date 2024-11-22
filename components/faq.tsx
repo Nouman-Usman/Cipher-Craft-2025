@@ -16,15 +16,15 @@ export function FAQ() {
     },
     {
       question: "Who can participate?",
-      answer: "CipherCraft is open to students, professionals, and anyone passionate about technology problem-solving."
+      answer: "CipherCraft is open to students, professionals, and anyone passionate about technology and problem-solving."
     },
     {
-      question: "Do I need to know how code?",
-      answer: "While coding skills are helpful, we welcome participants with diverse including design, project management, and domain expertise."
+      question: "Do I need to know how to code?",
+      answer: "While coding skills are helpful, we welcome participants with diverse skills including design, project management, and domain expertise."
     },
     {
       question: "How do I register?",
-      answer: "You can register by clicking the 'Register Now' button at top of this page and following instructions."
+      answer: "You can register by clicking the 'Register Now' button at the top of this page and following the instructions."
     },
     {
       question: "Is there a participation fee?",
@@ -33,7 +33,7 @@ export function FAQ() {
   ]
 
   return (
-    <section id="faq" className="py-20 md:py-32 bg-zinc-50">
+    <section id="faq" className="py-20 md:py-32 bg-background">
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,8 +42,8 @@ export function FAQ() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-neutral-500 dark:text-neutral-400">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">Frequently Asked Questions</h2>
+          <p className="text-xl text-muted-foreground">
             Got questions? We've got answers!
           </p>
         </motion.div>
@@ -55,9 +55,9 @@ export function FAQ() {
         >
           <Accordion type="single" collapsible className="max-w-2xl mx-auto">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
+                <AccordionTrigger className="text-foreground hover:text-primary">{faq.question}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
